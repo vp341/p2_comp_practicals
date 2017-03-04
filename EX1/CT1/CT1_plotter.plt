@@ -1,10 +1,8 @@
-cd 'C:\\Users\\Vandan\\Documents\\NST 2\\scicomp'
+cd 'C:\\Users\\Vandan\\Documents\\NST 2\\scicomp\\EX1\\CT1'
 
 
-set logscale x
-set xrange [0.3:3000000]
-plot 'CT1_results.dat' using 1:2:3 with yerrorbars notitle
-set xlabel "Number of values"
+set xlabel "Number of values per integral"
 show xlabel
-set ylabel "Value of integral"
-
+set ylabel "Standard Deviation of 50 integrals"
+show ylabel
+plot 'CT1_results.dat' using 1:(1/sqrt($3)) notitle
