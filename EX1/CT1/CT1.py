@@ -18,21 +18,14 @@ for this_length in range(1,10):
 	intresults = []
 	for i in range(0,n):
 		result = evaluate_int(this_length*10**6)
-		print(result)
 		intresults.append(result)
-		print(i)
 	means.append(np.mean(intresults))
 	stdevs.append(np.std(intresults))
-
-
-
 
 f = open('CT1_results.dat','w')
 f.write('n \t mean \t std \n')
 for i in range(0,len(means)):
-	toWrite = str(i*10**7) +'\t' + str(means[i])+'\t'+str(stdevs[i])+'\n'
+	toWrite = str((i+1)*10**7) +'\t' + str(means[i])+'\t'+str(stdevs[i])+'\n'
 	f.write(toWrite)
 f.close
-
-
-#print("mean "+str(mean)+" stdev "+str(stdev))
+#intvalue 537.187001574 +/- 0.0113829

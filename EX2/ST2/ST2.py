@@ -33,8 +33,8 @@ def indivperiod(theta0):
 	period_i = 2*totalTime/this_period
 	return period_i
 
-q = 10
-F = 0
+q = 0.5
+F = 1.2
 totalTime = 1000
 noOfSteps = 10000	
 initial = [0.01,0]
@@ -52,4 +52,3 @@ plt.ylabel('omega')
 plt.title(title)
 plt.grid()
 plt.show()
-

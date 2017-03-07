@@ -67,14 +67,6 @@ for i in range(0,len(thetavperiod)):
 	f.write(toWrite)
 f.close
 
-# print(sol[100],energy(sol[100]))
-# print(sol[1000], energy(sol[1000]))
-# print (sol[10000], energy(sol[10000]))
-# print (sol[100000], energy(sol[100000]))
-
-# plt.plot(t, sol[:, 0], 'b', label='theta(t)')
-# plt.plot(t, sol[:, 1], 'g', label='omega(t)')
-# plt.legend(loc='best')
-# plt.xlabel('t')
-# plt.grid()
-# plt.show()
+print("Period for theta_0 = pi/2:")
+print(thetavperiod[99][1])
+#7.3800s

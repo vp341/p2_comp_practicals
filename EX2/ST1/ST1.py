@@ -47,6 +47,8 @@ dif = sol2-sol1
 
 plt.plot(t, dif[:,0], 'b', label='theta')
 plt.legend(loc='best')
+plt.title('The difference between solutions with similar starting points')
+plt.ylabel('$\\theta_1 - \\theta_2$')
 plt.xlabel('t')
 plt.grid()
 plt.show()
