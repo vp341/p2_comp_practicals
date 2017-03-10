@@ -38,7 +38,9 @@ def central_slit_phase(array_sizes,d,L,s,m,l,D):
 
 l = 500e-9 #wavelength
 L = 5e-3 #aperture length
-d = 100e-6 # slit width
+
+d1 = 100e-6 # slit width
+d2 = 2e-3
 D2 = 0.5 #screen - source distance
 s = 100e-6 #phase spacing of aperture
 m = 8
@@ -48,7 +50,7 @@ D1 = 5e-3
 array_sizes = 2**18
 x1 = np.fft.fftshift(np.fft.fftfreq(array_sizes,L/array_sizes))
 x1 = x1*l*D1/(2*np.pi)
-A1 = central_slit(array_sizes,d,L,l,D1)
+A1 = central_slit(array_sizes,d1,L,l,D1)
 fft1 = np.fft.fftshift(np.fft.fft(A1))
 fft1 = fft1/np.max(fft1)
 fft12 = np.abs(fft1)**2
@@ -64,7 +66,7 @@ plt.show()
 
 x2 = np.fft.fftshift(np.fft.fftfreq(array_sizes,L/array_sizes))
 x2 = x2*l*D2/(2*np.pi)
-A2 = central_slit_phase(array_sizes,d,L,s,m,l,D2)
+A2 = central_slit_phase(array_sizes,d2,L,s,m,l,D2)
 fft2 = np.fft.fftshift(np.fft.fft(A2))
 fft2 = fft2/np.max(fft2)
 fft22 = np.abs(fft2)**2

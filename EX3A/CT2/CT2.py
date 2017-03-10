@@ -18,7 +18,7 @@ def central_slit(array_sizes,d,L,s,m):
 
 l = 500e-9 #wavelength
 L = 5e-3 #aperture length
-d = 100e-6 # slit width
+d = 2e-3 # slit width
 D = 10 #screen - source distance
 s = 100e-6 #phase spacing of aperture
 m = 8
@@ -33,9 +33,10 @@ fft2 = np.abs(fft)**2
 reduced_x = 2*x*np.pi*d/(l*D)
 analytic = np.sinc(reduced_x)**2
 #plt.plot(x,analytic,'r',label='Analytic')
-plt.plot(x,np.real(fft), 'b', label='FFT')
-plt.plot(x,np.imag(fft), 'g', label='IMAG FFT')
-plt.plot(x,fft2,'r',label = 'FFT Intensity')
+#plt.plot(x,np.real(fft), 'b', label='FFT')
+#plt.plot(x,np.imag(fft), 'g', label='IMAG FFT')
+#plt.plot(x,fft2,'r',label = 'FFT Intensity')
+plt.plot(x,fft2,'r',label = '')
 plt.xlabel('y / m')
 plt.ylabel('Relative Intensity')
 plt.legend(loc='best')
